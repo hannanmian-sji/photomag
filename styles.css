@@ -423,7 +423,7 @@ button { color: inherit; font: inherit; }
   .home-page .cover { padding-inline: 18px; }
   .home-page .cover-meta { height: 32px; }
   .home-page .cover-image { height: auto; min-height: 0; display: flex; flex-direction: column; padding-top: 30px; }
-  .home-page .cover-photo { position: static; order: 0; width: 100%; height: 175px; flex: none; }
+  .home-page .cover-photo { position: static; order: 0; width: 100%; height: min(82vw, 340px); flex: none; }
   .home-page .cover-copy { position: static; order: 1; width: 100%; height: auto; padding: 13px 15px 15px; }
   .home-page .cover-eyebrow { font-size: 7px; }
   .home-page .cover h1 { font-size: 35px; }

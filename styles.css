@@ -36,7 +36,7 @@ button { color: inherit; font: inherit; }
 .meta-dot { display: inline-block; height: 3px; width: 3px; border-radius: 50%; background: var(--accent); vertical-align: middle; margin: 0 8px 2px; }
 .cover-image {
   height: min(590px, 52vw); min-height: 430px; position: relative; overflow: hidden; color: white;
-  background: #e8e3d8 url("images/medina/minaret-green-dome-1916.jpg") center 48% / cover no-repeat;
+  background: #e8e3d8;
 }
 .cover-shade { display: none; }
 .cover-copy { position: absolute; left: 8.3%; top: 50%; transform: translateY(-45%); }
@@ -335,12 +335,16 @@ button { color: inherit; font: inherit; }
 .home-page .cover { padding-inline: 5%; }
 .home-page .cover-meta { height: 35px; }
 .home-page .cover-image { height: clamp(260px, 32vw, 400px); min-height: 260px; color: var(--ink); }
+.home-page .cover-photo {
+  position: absolute; inset: 0 0 0 auto; width: 60%; height: 100%; object-fit: contain;
+  background: #e8e3d8;
+}
 .home-page .cover-copy {
-  left: 0; top: 0; transform: none; width: min(40%, 450px); height: 100%; padding: 5%;
+  left: 0; top: 0; transform: none; width: 40%; height: 100%; padding: 4%;
   display: flex; flex-direction: column; justify-content: center; background: var(--paper);
 }
 .home-page .cover-eyebrow { margin-bottom: 12px; color: var(--muted); }
-.home-page .cover h1 { font-size: clamp(48px, 5.2vw, 68px); }
+.home-page .cover h1 { font-size: clamp(42px, 4.6vw, 62px); }
 .home-page .cover-deck { margin: 12px 0 15px; color: #68645c; }
 .home-page .round-link { border-color: var(--ink); }
 .home-page .round-link:hover { background: var(--ink); color: var(--paper); }
@@ -397,7 +401,8 @@ button { color: inherit; font: inherit; }
 @media (max-width: 760px) {
   .home-page .cover { padding-inline: 5%; }
   .home-page .cover-image { height: 260px; min-height: 0; }
-  .home-page .cover-copy { width: 44%; padding: 4%; }
+  .home-page .cover-photo { width: 60%; }
+  .home-page .cover-copy { width: 40%; padding: 3%; }
   .home-page .intro { padding: 17px 7% 19px; }
   .home-page .stories-section { padding: 24px 5% 34px; }
   .home-page .story-card,
@@ -417,8 +422,9 @@ button { color: inherit; font: inherit; }
   .home-page .topbar { height: 58px; }
   .home-page .cover { padding-inline: 18px; }
   .home-page .cover-meta { height: 32px; }
-  .home-page .cover-image { height: 230px; min-height: 0; background-position: 58% center; }
-  .home-page .cover-copy { width: 52%; padding: 14px; }
+  .home-page .cover-image { height: auto; min-height: 0; display: flex; flex-direction: column; padding-top: 30px; }
+  .home-page .cover-photo { position: static; order: 0; width: 100%; height: 175px; flex: none; }
+  .home-page .cover-copy { position: static; order: 1; width: 100%; height: auto; padding: 13px 15px 15px; }
   .home-page .cover-eyebrow { font-size: 7px; }
   .home-page .cover h1 { font-size: 35px; }
   .home-page .cover-deck { font-size: 9px; margin: 8px 0 10px; }

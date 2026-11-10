@@ -1,0 +1,2 @@
+# photomag
+photography focus

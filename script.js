@@ -31,10 +31,9 @@ const lightboxCredit = document.querySelector(".lightbox-credit");
 
 photoCards.forEach((card) => {
   card.addEventListener("click", () => {
-    const backgroundImage = getComputedStyle(card.querySelector(".photo-image")).backgroundImage;
-    const imageUrl = backgroundImage.slice(5, -2);
-    lightboxImage.src = imageUrl.replace(/w=\d+/, "w=1800");
-    lightboxImage.alt = card.querySelector(".photo-image").getAttribute("aria-label");
+    const photo = card.querySelector(".photo-image");
+    lightboxImage.src = photo.src;
+    lightboxImage.alt = photo.alt;
     lightboxTitle.textContent = card.dataset.title;
     lightboxCredit.textContent = `Image via ${card.dataset.credit}`;
     lightbox.showModal();

@@ -36,9 +36,9 @@ button { color: inherit; font: inherit; }
 .meta-dot { display: inline-block; height: 3px; width: 3px; border-radius: 50%; background: var(--accent); vertical-align: middle; margin: 0 8px 2px; }
 .cover-image {
   height: min(590px, 52vw); min-height: 430px; position: relative; overflow: hidden; color: white;
-  background: #827b6a url("https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=2200&q=85") center 48% / cover no-repeat;
+  background: #e8e3d8 url("images/medina/minaret-green-dome-1916.jpg") center 48% / cover no-repeat;
 }
-.cover-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,25,24,.49), rgba(20,25,24,.12) 58%, rgba(20,25,24,.04)), linear-gradient(0deg, rgba(20,25,24,.25), transparent 35%); }
+.cover-shade { display: none; }
 .cover-copy { position: absolute; left: 8.3%; top: 50%; transform: translateY(-45%); }
 .eyebrow { margin: 0; color: var(--muted); font: 9px var(--mono); text-transform: uppercase; letter-spacing: .1em; }
 .cover-eyebrow { color: rgba(255,255,255,.82); margin-bottom: 21px; }
@@ -78,10 +78,8 @@ button { color: inherit; font: inherit; }
 .filter-side-note span { color: var(--accent); margin-left: 5px; }
 .photo-grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 18px; row-gap: 41px; align-items: start; }
 .photo-card { border: 0; padding: 0; text-align: left; background: none; cursor: pointer; min-width: 0; }
-.photo-image { display: block; width: 100%; background-color: #ded7c9; background-size: cover; background-position: center; transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .3s; }
-.photo-card:hover .photo-image { filter: saturate(.83); }
+.photo-image { display: block; width: 100%; background-color: #e8e3d8; object-fit: contain; object-position: center; }
 .photo-card { overflow: hidden; }
-.photo-card:hover .photo-image { transform: scale(1.025); }
 .card-large { grid-column: 1 / span 7; }
 .card-large .photo-image { aspect-ratio: 1.37; }
 .card-tall { grid-column: 9 / span 4; margin-top: 66px; }
@@ -93,12 +91,6 @@ button { color: inherit; font: inherit; }
 .card-wide .photo-image { aspect-ratio: 1.52; }
 .card-last { grid-column: 9 / span 4; margin-top: -40px; }
 .card-last .photo-image { aspect-ratio: .94; }
-.image-coast { background-image: url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=85"); }
-.image-woman { background-image: url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"); }
-.image-stilllife { background-image: url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=85"); }
-.image-house { background-image: url("https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1000&q=85"); }
-.image-road { background-image: url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85"); }
-.image-room { background-image: url("https://images.unsplash.com/photo-1449247709967-d4461a6a6103?auto=format&fit=crop&w=900&q=85"); }
 .photo-info { display: flex; justify-content: space-between; align-items: center; padding-top: 11px; }
 .photo-info > span:first-child { display: grid; gap: 5px; }
 .photo-number { color: var(--muted); font: 8px var(--mono); letter-spacing: .04em; }
@@ -240,8 +232,9 @@ button { color: inherit; font: inherit; }
 .article-deck { max-width: 600px; margin: 0 auto; color: #68645c; font: 500 clamp(17px, 2vw, 21px)/1.55 var(--serif); }
 .article-byline { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; margin-top: 27px; color: var(--muted); font: 8px var(--mono); text-transform: uppercase; letter-spacing: .035em; }
 .article-hero { max-width: 1120px; margin: 0 auto; padding: 0 30px; }
-.article-hero img { display: block; width: 100%; height: clamp(280px, 48vw, 570px); object-fit: cover; object-position: center 54%; }
+.article-hero img { display: block; width: 100%; height: clamp(280px, 48vw, 570px); object-fit: contain; background: #e8e3d8; }
 .article-hero figcaption, .essay-frame figcaption { display: flex; gap: 10px; align-items: baseline; padding-top: 10px; color: var(--muted); font: 9px/1.6 var(--mono); }
+.article-hero figcaption a { text-decoration: underline; text-decoration-color: #b7ad9e; text-underline-offset: 3px; }
 .article-layout { display: grid; grid-template-columns: 170px minmax(0, 670px); gap: clamp(35px, 8vw, 110px); max-width: 1100px; margin: 75px auto 110px; padding: 0 30px; align-items: start; }
 .article-aside { position: sticky; top: 28px; display: grid; gap: 13px; padding-top: 5px; }
 .aside-label { margin-bottom: 3px; color: var(--accent); font: 8px var(--mono); letter-spacing: .1em; }
@@ -272,7 +265,7 @@ button { color: inherit; font: inherit; }
 .essay-article { max-width: 1180px; margin: 0 auto; }
 .essay-article .article-header { padding-bottom: 42px; }
 .essay-frame { min-width: 0; margin: 0; }
-.essay-frame img { display: block; width: 100%; max-height: 650px; object-fit: cover; }
+.essay-frame img { display: block; width: 100%; max-height: 650px; object-fit: contain; background: #e8e3d8; }
 .essay-frame-wide { padding: 0 30px; }
 .essay-frame-wide img { width: 100%; height: clamp(290px, 55vw, 640px); }
 .essay-frame figcaption { display: block; }
@@ -341,11 +334,19 @@ button { color: inherit; font: inherit; }
 .home-page .topbar { height: 62px; }
 .home-page .cover { padding-inline: 5%; }
 .home-page .cover-meta { height: 35px; }
-.home-page .cover-image { height: clamp(220px, 22vw, 300px); min-height: 220px; }
-.home-page .cover-copy { left: 6%; }
-.home-page .cover-eyebrow { margin-bottom: 12px; }
+.home-page .cover-image { height: clamp(260px, 32vw, 400px); min-height: 260px; color: var(--ink); }
+.home-page .cover-copy {
+  left: 0; top: 0; transform: none; width: min(40%, 450px); height: 100%; padding: 5%;
+  display: flex; flex-direction: column; justify-content: center; background: var(--paper);
+}
+.home-page .cover-eyebrow { margin-bottom: 12px; color: var(--muted); }
 .home-page .cover h1 { font-size: clamp(48px, 5.2vw, 68px); }
-.home-page .cover-deck { margin: 12px 0 15px; }
+.home-page .cover-deck { margin: 12px 0 15px; color: #68645c; }
+.home-page .round-link { border-color: var(--ink); }
+.home-page .round-link:hover { background: var(--ink); color: var(--paper); }
+.home-page .issue-stamp { border-color: var(--ink); color: var(--ink); }
+.home-page .image-credit { padding: 7px 9px; background: var(--paper); color: var(--ink); }
+.home-page .image-credit a { color: inherit; }
 .home-page .cover-footer { height: 38px; }
 .home-page .intro { padding: 19px 8% 21px; border-bottom: 1px solid var(--line); }
 .home-page .intro > p { max-width: 980px; margin: 8px auto; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.2; }
@@ -395,7 +396,8 @@ button { color: inherit; font: inherit; }
 
 @media (max-width: 760px) {
   .home-page .cover { padding-inline: 5%; }
-  .home-page .cover-image { height: 210px; min-height: 0; }
+  .home-page .cover-image { height: 260px; min-height: 0; }
+  .home-page .cover-copy { width: 44%; padding: 4%; }
   .home-page .intro { padding: 17px 7% 19px; }
   .home-page .stories-section { padding: 24px 5% 34px; }
   .home-page .story-card,
@@ -415,9 +417,14 @@ button { color: inherit; font: inherit; }
   .home-page .topbar { height: 58px; }
   .home-page .cover { padding-inline: 18px; }
   .home-page .cover-meta { height: 32px; }
-  .home-page .cover-image { height: 240px; min-height: 0; }
-  .home-page .cover h1 { font-size: 48px; }
-  .home-page .cover-deck { font-size: 11px; }
+  .home-page .cover-image { height: 230px; min-height: 0; background-position: 58% center; }
+  .home-page .cover-copy { width: 52%; padding: 14px; }
+  .home-page .cover-eyebrow { font-size: 7px; }
+  .home-page .cover h1 { font-size: 35px; }
+  .home-page .cover-deck { font-size: 9px; margin: 8px 0 10px; }
+  .home-page .round-link { width: 30px; height: 30px; font-size: 14px; }
+  .home-page .issue-stamp { width: 42px; height: 42px; right: 4%; top: 5%; }
+  .home-page .image-credit { right: 6px; bottom: 6px; font-size: 6px; padding: 5px 6px; }
   .home-page .cover-footer { height: 37px; }
   .home-page .intro { padding: 17px 20px 19px; }
   .home-page .intro > p { font-size: 21px; }

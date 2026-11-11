@@ -27,7 +27,6 @@ filterButtons.forEach((button) => {
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxTitle = document.querySelector(".lightbox-title");
-const lightboxCredit = document.querySelector(".lightbox-credit");
 
 photoCards.forEach((card) => {
   card.addEventListener("click", () => {
@@ -35,7 +34,6 @@ photoCards.forEach((card) => {
     lightboxImage.src = photo.src;
     lightboxImage.alt = photo.alt;
     lightboxTitle.textContent = card.dataset.title;
-    lightboxCredit.textContent = `Image via ${card.dataset.credit}`;
     lightbox.showModal();
   });
 });

@@ -351,7 +351,11 @@ button { color: inherit; font: inherit; }
   color: #174f3b; font: 500 clamp(38px, 4vw, 56px)/.98 var(--serif); letter-spacing: -.055em;
 }
 .home-page .cover h1 em { color: #527a5d; }
-.home-page .cover-deck { margin: 12px 0 15px; color: #68645c; }
+.home-page .cover-deck {
+  margin: 12px 0 15px; color: #68645c;
+  font: italic 500 16px/1.45 var(--serif); letter-spacing: -.015em;
+}
+.home-page .cover-deck em { color: #527a5d; }
 .home-page .round-link { border-color: var(--ink); }
 .home-page .round-link:hover { background: var(--ink); color: var(--paper); }
 .home-page .issue-stamp { border-color: var(--ink); color: var(--ink); }
@@ -437,7 +441,7 @@ button { color: inherit; font: inherit; }
   .home-page .cover-copy { position: static; order: 1; width: 100%; height: auto; padding: 13px 15px 15px; }
   .home-page .cover-eyebrow { font-size: 7px; }
   .home-page .cover h1 { font-size: 35px; }
-  .home-page .cover-deck { font-size: 9px; margin: 8px 0 10px; }
+  .home-page .cover-deck { font-size: 14px; margin: 8px 0 10px; }
   .home-page .round-link { width: 38px; height: 38px; flex: 0 0 38px; font-size: 17px; }
   .home-page .issue-stamp { width: 42px; height: 42px; right: 4%; top: 5%; }
   .home-page .image-title { right: 6px; bottom: 6px; font-size: 6px; padding: 5px 6px; }

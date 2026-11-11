@@ -343,7 +343,10 @@ button { color: inherit; font: inherit; }
   display: flex; flex-direction: column; justify-content: center; background: var(--paper);
 }
 .home-page .cover-eyebrow { margin-bottom: 12px; color: var(--muted); }
-.home-page .cover h1 { font-size: clamp(42px, 4.6vw, 62px); }
+.home-page .cover h1 {
+  color: #174f3b; font: 500 clamp(38px, 4vw, 56px)/.98 var(--serif); letter-spacing: -.055em;
+}
+.home-page .cover h1 em { color: #527a5d; }
 .home-page .cover-deck { margin: 12px 0 15px; color: #68645c; }
 .home-page .round-link { border-color: var(--ink); }
 .home-page .round-link:hover { background: var(--ink); color: var(--paper); }

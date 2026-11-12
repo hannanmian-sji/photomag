@@ -356,6 +356,10 @@ button { color: inherit; font: inherit; }
   font: italic 500 16px/1.45 var(--serif); letter-spacing: -.015em;
 }
 .home-page .cover-deck em { color: #527a5d; }
+.home-page .stories-heading h2,
+.home-page .story-title,
+.home-page .gallery-heading h2,
+.home-page .dispatch h2 { font-family: var(--serif); }
 .home-page .round-link { border-color: var(--ink); }
 .home-page .round-link:hover { background: var(--ink); color: var(--paper); }
 .home-page .issue-stamp { border-color: var(--ink); color: var(--ink); }
@@ -367,7 +371,7 @@ button { color: inherit; font: inherit; }
 .home-page .text-link { font-size: 9px; }
 .home-page .stories-section { padding: 27px 5% 42px; }
 .home-page .stories-heading { margin-bottom: 15px; }
-.home-page .stories-heading h2 { margin-top: 7px; font-size: clamp(31px, 3.5vw, 43px); }
+.home-page .stories-heading h2 { margin-top: 7px; font-size: clamp(29px, 3.2vw, 39px); font-weight: 400; }
 .home-page .stories-heading > p { font-size: 10px; }
 .home-page .story-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .home-page .story-card,
@@ -378,12 +382,12 @@ button { color: inherit; font: inherit; }
 .home-page .story-card.story-notes:hover,
 .home-page .story-card.story-images:hover { background: #ece8df; }
 .home-page .story-index { font-size: 7px; }
-.home-page .story-title { margin: 20px 0 8px; font-size: clamp(25px, 2.5vw, 34px); }
+.home-page .story-title { margin: 20px 0 8px; font-size: clamp(23px, 2.3vw, 31px); }
 .home-page .story-summary { font-size: 11px; line-height: 1.5; }
 .home-page .story-cta { margin-top: 13px; padding-top: 9px; font-size: 7px; }
 .home-page .gallery-section { padding: 38px 5% 55px; }
 .home-page .gallery-heading { margin-bottom: 17px; }
-.home-page .gallery-heading h2 { margin-top: 7px; font-size: clamp(34px, 3.8vw, 48px); }
+.home-page .gallery-heading h2 { margin-top: 7px; font-size: clamp(31px, 3.5vw, 43px); }
 .home-page .filter-row { min-height: 42px; margin-bottom: 17px; }
 .home-page .photo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 16px; row-gap: 22px; }
 .home-page .card-large,
@@ -403,7 +407,7 @@ button { color: inherit; font: inherit; }
 .home-page .photo-title { font-size: 13px; }
 .home-page .dispatch { padding: 34px 7%; }
 .home-page .dispatch-mark { font-size: 28px; }
-.home-page .dispatch h2 { font-size: 38px; }
+.home-page .dispatch h2 { font-size: 35px; }
 .home-page .dispatch-text { margin-block: 8px; }
 .home-page .footer { min-height: 70px; padding-block: 15px; }
 
@@ -449,17 +453,17 @@ button { color: inherit; font: inherit; }
   .home-page .intro { padding: 17px 20px 19px; }
   .home-page .intro > p { font-size: 21px; }
   .home-page .stories-section { padding: 27px 18px 33px; }
-  .home-page .stories-heading h2 { font-size: 34px; }
+  .home-page .stories-heading h2 { font-size: 31px; }
   .home-page .story-grid { grid-template-columns: 1fr; }
   .home-page .story-card,
   .home-page .story-card.story-notes,
   .home-page .story-card.story-images { padding: 14px 0; }
   .home-page .story-card + .story-card { border-left: 0; border-top: 1px solid var(--line); }
-  .home-page .story-title { margin: 10px 0 6px; font-size: 30px; }
+  .home-page .story-title { margin: 10px 0 6px; font-size: 27px; }
   .home-page .story-summary { max-width: none; }
   .home-page .story-cta { margin-top: 9px; }
   .home-page .gallery-section { padding: 28px 18px 38px; }
-  .home-page .gallery-heading h2 { font-size: 38px; }
+  .home-page .gallery-heading h2 { font-size: 34px; }
   .home-page .filter-row { margin-bottom: 13px; }
   .home-page .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px 10px; }
   .home-page .card-large .photo-image,
@@ -470,5 +474,5 @@ button { color: inherit; font: inherit; }
   .home-page .card-last .photo-image { aspect-ratio: 1.1; }
   .home-page .photo-title { font-size: 11px; }
   .home-page .dispatch { padding: 35px 24px; }
-  .home-page .dispatch h2 { font-size: 36px; }
+  .home-page .dispatch h2 { font-size: 33px; }
 }
